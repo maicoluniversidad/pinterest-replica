@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: -apple-system, sans-serif;
+}
+
+.card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 32px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.logo { width: 35px; margin-bottom: 15px; }
+
+/* CONTENEDOR DE BOTONES SUPERIORES */
+.navButtonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.navBtn {
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* BOTÓN ROJO (Iniciar sesión) */
+.btnRed {
+  background-color: #e60023;
+  color: white;
+  border: none;
+}
+
+/* BOTÓN GRIS CON BORDE AZUL (Registrarse) */
+.btnGrayBorderBlue {
+  background-color: #efefef;
+  color: #111;
+  border: 2px solid #0076d3; /* El color azul exacto de tu imagen */
+}
+
+.title { font-size: 28px; font-weight: 600; margin-bottom: 8px; color: #111; }
+.subtitle { font-size: 16px; margin-bottom: 25px; color: #111; }
+
+.form { display: flex; flex-direction: column; gap: 15px; text-align: left; }
+.label { font-size: 14px; font-weight: 700; margin-left: 8px; color: #111; }
+
+.input {
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 2px solid #cdcdcd;
+  font-size: 16px;
+  outline: none;
+}
+
+.input:focus { border-color: #0076d3; }
+.inputError { border-color: #e60023; }
+
+.errorText { color: #e60023; font-size: 13px; font-weight: 700; margin-left: 8px; }
+
+.submitBtn {
+  background-color: #e60023;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}

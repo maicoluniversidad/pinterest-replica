@@ -1,0 +1,53 @@
+/* ... Tus estilos de .container y .card se mantienen ... */
+
+/* Grupo de botones superiores (image_8f5cca.png) */
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.navButton {
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+/* BOTÓN INICIAR SESIÓN: Fondo rojo, texto blanco (Solución al error) */
+.loginBtn {
+  background-color: #e60023 !important; 
+  color: #ffffff !important; 
+}
+
+.loginBtn:hover {
+  background-color: #ad081b !important;
+}
+
+/* BOTÓN REGISTRARSE: Fondo gris, borde azul (Como en tu imagen) */
+.registerBtnActive {
+  background-color: #efefef !important;
+  color: #111111 !important;
+  border: 2px solid #0076d3 !important;
+}
+
+/* BOTÓN CONTINUAR (El de abajo del todo) */
+.button {
+  background-color: #e60023;
+  color: white !important; /* Asegura texto blanco */
+  border: none;
+  padding: 14px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #ad081b;
+}
