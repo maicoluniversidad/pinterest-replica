@@ -116,7 +116,7 @@ const s: { [key: string]: React.CSSProperties } = {
     boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
   },
   logo: {
-    width: '40px', // ESTO EVITA QUE SE VEA GIGANTE
+    width: '40px', 
     height: '40px',
     marginBottom: '20px',
   },
@@ -141,7 +141,7 @@ const s: { [key: string]: React.CSSProperties } = {
   btnGrayBorderBlue: {
     backgroundColor: '#efefef',
     color: '#111',
-    border: '2px solid #0076d3', // BORDE AZUL DE TU IMAGEN
+    border: '2px solid #0076d3', 
   },
   title: { fontSize: '28px', fontWeight: '700', margin: '10px 0', color: '#111' },
   subtitle: { fontSize: '16px', marginBottom: '25px', color: '#555' },
@@ -153,6 +153,7 @@ const s: { [key: string]: React.CSSProperties } = {
     border: '2px solid #cdcdcd',
     fontSize: '16px',
     outline: 'none',
+    color: 'black'
   },
   submitBtn: {
     backgroundColor: '#e60023',

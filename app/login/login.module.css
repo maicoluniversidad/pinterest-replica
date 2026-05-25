@@ -62,6 +62,7 @@
   border: 2px solid #cdcdcd;
   font-size: 16px;
   outline: none;
+  color: black;
 }
 
 .input:focus { border-color: #0076d3; }

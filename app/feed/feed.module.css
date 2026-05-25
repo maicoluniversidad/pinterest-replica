@@ -1,0 +1,201 @@
+.feedWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding-top: 80px; /* Espacio para el header fijo */
+}
+
+/* Header superior */
+.feedHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.btnNavActive {
+  background-color: #111111;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btnNav {
+  background: transparent;
+  color: #111111;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btnNav:hover {
+  background-color: #f0f0f0;
+}
+
+.searchBarPlaceholder {
+  flex-grow: 1;
+  background-color: #f1f1f1;
+  color: #767676;
+  padding: 12px 16px;
+  border-radius: 24px;
+  font-size: 14px;
+}
+
+/* 🔥 EFECTO MASONRY (El truco de Pinterest) */
+.masonryGrid {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Configura cuántas columnas tendrá según el ancho de pantalla */
+  column-count: 5;
+  column-gap: 16px; /* Espacio horizontal entre columnas */
+}
+
+/* Modificar columnas dinámicamente en pantallas pequeñas */
+@media (max-width: 1100px) { .masonryGrid { column-count: 4; } }
+@media (max-width: 800px) { .masonryGrid { column-count: 3; } }
+@media (max-width: 550px) { .masonryGrid { column-count: 2; } }
+
+/* Tarjeta contenedora de cada Pin */
+.pinCard {
+  break-inside: avoid; /* 🔥 OBLIGATORIO: Evita que un pin se parta a la mitad entre dos columnas */
+  margin-bottom: 16px; /* Espacio vertical entre pines */
+  display: inline-block;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: zoom-in;
+  background-color: #f0f0f0;
+}
+
+.pinImage {
+  width: 100%;
+  height: auto; /* Permite que cada imagen conserve su proporción natural (desorganizado) */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Capa de Hover interactiva */
+.imageWrapper:hover .pinImage {
+  transform: scale(1.03);
+}
+
+.imageWrapper:hover .pinOverlay {
+  opacity: 1;
+}
+
+.pinOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px;
+}
+
+.btnSave {
+  background-color: #e60023;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  height: max-content;
+}
+
+.btnSave:hover {
+  background-color: #ad001d;
+}
+
+/* Detalles del texto */
+.pinTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+  margin: 6px 4px 2px 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  whiteSpace: nowrap;
+}
+
+.pinAuthor {
+  font-size: 12px;
+  color: #5f5f5f;
+  margin: 0 4px;
+}
+
+/* Spinner de Carga */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 16px;
+  color: #5f5f5f;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #e60023;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.emptyFeed {
+  text-align: center;
+  padding: 100px 20px;
+  color: #767676;
+}
+
+.emptyFeed button {
+  background-color: #e60023;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: bold;
+  margin-top: 16px;
+  cursor: pointer;
+}
